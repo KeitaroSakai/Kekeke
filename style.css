@@ -1,0 +1,34 @@
+/* 全体のスタイル */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* 背景アニメーション（星空っぽい効果） */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(10,10,25,1) 0%, rgba(0,0,0,1) 100%);
+    z-index: -1;
+    animation: spaceBackground 20s infinite alternate;
+}
+
+/* タイトル */
+h1 {
+    font-size: 3em;
+    text-shadow: 0 0 20px cyan;
+}
+
+/* アニメーション */
+@keyframes spaceBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
